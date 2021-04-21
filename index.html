@@ -104,10 +104,17 @@
   mapboxgl.accessToken = 'pk.eyJ1IjoiY29tb3JlaG91c2UxNjIwIiwiYSI6ImNrbGpzdG9zazBudW0ydXBmZDE4Nmx2cHgifQ.mVF4ibqhEiChmb8ShMbehQ';
     // Create a variable called "map" to house your map
   var map = new mapboxgl.Map({
+  container: "map",
   style: "mapbox://styles/comorehouse1620/cknqj7ux301q317n63g9eirub",
-  container: "map"
   });
+
+
     // Add a legend
+  map.on('load', function() {
+    var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
+    var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
+  });
+  
   for (i = 0; i < layers.length; i++) {
     var layer = layers[i];
     var color = colors[i];
