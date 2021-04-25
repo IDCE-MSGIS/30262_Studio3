@@ -62,9 +62,7 @@
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
       center: [-122.44, 37.76], // starting position [lng, lat]
-      zoom: 11, // starting zoom
-      pitch: 60,
-      bearing: 45
+      zoom: 11 // starting zoom
     });
 
     // Add a popup: https://docs.mapbox.com/mapbox-gl-js/example/popup/
@@ -89,7 +87,7 @@
     });
 
     // Add a function that sets pitch (tilt) to 60 and bearing (rotation) to 45: https://docs.mapbox.com/mapbox-gl-js/api/#map#setpitch and https://docs.mapbox.com/mapbox-gl-js/api/#map#setbearing
-    
+    map.setBearing(45);
     // Add a search box: https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
 
     // Add a geolocation button: https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol
