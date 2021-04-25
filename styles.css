@@ -19,7 +19,7 @@ li:last-child {
 
 li a {
  display: block;
- color: white;
+ color:black;
  text-align: left;
  padding: 15px 17px;
  text-decoration: none;
@@ -27,7 +27,7 @@ li a {
 
 /* Links will change color when hovered over */
 li a:hover {
- background-color: #a09f9f;
+ background-color: white;
 }
 
 .active {
