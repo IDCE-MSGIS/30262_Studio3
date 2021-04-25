@@ -9,7 +9,8 @@ ul {
 
 li {
  float: left;
- border-right: 2px solid black;
+ border-right: 2px solid white;
+ border-left: 2px solid white;
 }
 
 /* Add a border to all( but not the last) list items */
