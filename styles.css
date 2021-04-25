@@ -1,9 +1,10 @@
+
 ul {
  list-style-type: none;
  margin: 1px;
  padding: 1px;
  overflow: hidden;
- background-color: white;
+ background-color: thistle;
 }
 
 li {
@@ -31,4 +32,8 @@ li a:hover {
 
 .active {
  background-color: #a09f9f;
+}
+
+body {
+background-color: thistle;
 }
