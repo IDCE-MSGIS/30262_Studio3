@@ -1,9 +1,10 @@
+
 ul {
  list-style-type: none;
  margin: 1px;
  padding: 1px;
  overflow: hidden;
- background-color: white;
+ background-color: thistle;
 }
 
 li {
@@ -18,7 +19,7 @@ li:last-child {
 
 li a {
  display: block;
- color: black;
+ color:black;
  text-align: left;
  padding: 15px 17px;
  text-decoration: none;
@@ -26,9 +27,22 @@ li a {
 
 /* Links will change color when hovered over */
 li a:hover {
- background-color: #a09f9f;
+ background-color: white;
 }
 
 .active {
- background-color: #a09f9f;
+ background-color: white;
+}
+
+body {
+background-color: thistle;
+margin: 5px;
+}
+
+title {
+background-color: white;
+}
+
+h1 {
+background-color: wh
 }
