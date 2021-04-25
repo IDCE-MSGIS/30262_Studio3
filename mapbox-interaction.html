@@ -49,6 +49,14 @@
     <li><a class="active" href="mapbox-interaction.html" target="_self">Output 2</a></li>
     <li><a href="mapbox-turfjs.html" target="_self">Output 3</a></li>
   </ul>
+  <!-- Load the `mapbox-gl-geocoder` plugin. -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+  
+  <!-- Promise polyfill script is required -->
+  <!-- to use Mapbox GL Geocoder in IE 11. -->
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
   <br>
 
   <div id="map"></div>
@@ -90,7 +98,13 @@
     map.setBearing(45);
     map.setPitch(60);
     // Add a search box: https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
-
+    // Add the control to the map.
+    map.addControl(
+     new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+     })
+    );
     // Add a geolocation button: https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol
 
     </script>
