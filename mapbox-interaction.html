@@ -53,7 +53,7 @@
 
   <div id="map"></div>
   <br>
-  <button id="fly to San Diego">Fly</button>
+  <button id="fly">Fly to San Diego</button>
   <script>
 
     // Initialize the map
@@ -74,17 +74,17 @@
     // Add pan and zoom controls: https://docs.mapbox.com/mapbox-gl-js/api/#map#addcontrol
     map.addControl(new mapboxgl.NavigationControl());
     // Add a function that flies to a location: https://docs.mapbox.com/mapbox-gl-js/api/#map#flyto
-    // fly with default options to null island
-    map.flyTo({
-      center: [-117.16, 32.71],
-      zoom: 9,
-      speed: 1,
-      curve: 1,
-      easing(t) {
-      return t;
-      }
+    document.getElementById('fly').addEventListener('click', function () {
+      map.flyTo({
+        center: [-117.16, 32.71],
+        zoom: 9,
+        speed: 1,
+        curve: 1,
+        easing(t) {
+        return t;
+        }
+      });
     });
-  
 
     // Add a function that sets pitch (tilt) to 60 and bearing (rotation) to 45: https://docs.mapbox.com/mapbox-gl-js/api/#map#setpitch and https://docs.mapbox.com/mapbox-gl-js/api/#map#setbearing
 
