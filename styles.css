@@ -1,9 +1,9 @@
 ul {
  list-style-type: none;
- margin: 1px;
- padding: 1px;
+ margin: 2px;
+ padding: 2px;
  overflow: hidden;
- background-color: white;
+ background-color: paleturquoise;
 }
 
 li {
